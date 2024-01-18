@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Aerobics - My hobby</title>
+    <style>
+       body {
+    background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+
+       }
+
+       h1   {
+        text-align: center;
+       }
+
+       h2{
+        text-align: center;
+       }
+
+       .container {
+       max-width: 600px; 
+       margin: 20px auto;
+       background: white;
+       padding: 20px;
+       border-radius: 10px;
+       }
+    
+       img  {
+        max-width: 100%;
+       }
+
+       button  {
+        display: block;
+        margin: 0 auto;
+        border: 6x solid plum;
+        background: plum;
+        font size: 20px;
+        font-style: bolder;
+        border-radius: 6px;
+        padding: 12px 17px;
+        transition: all 150ms ease-in-out;
+        box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.05);
+       }
+
+        button:hover  {
+            background: plum;
+            color: white;
+            cursor: pointer;
+        }
+        p   {
+        line-height: 1.5;
+        font-size: 18px;
+        }
+
+        footer  {
+            text-align: center;
+            margin: 10px 0;
+            color: black;
+            font-size: 18px;
+        }
+        .theme-button   {
+            font-size: 10px;
+            background: black;
+            color: white;
+            padding: 5 8px;
+            border-radius: 6px;
+        }
+        .theme-button:hover {
+            background: white;
+            color: black;
+        }
+
+        .vibe-tribe-picture { 
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        
+        }
+        .vibe-tribe-picture:hover {
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+        .grid  {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+
+        }
+        .grid img:hover {
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+        .dark   {
+        background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+        color: white;
+        }
+        .dark .container{
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .dark a {
+            color: plum
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-button">change theme</button>
+    <div class="container">
+    <h1>Step Aerobics</h1>
+    <h2>My favorite form of exercise!</h2>
+    
+    <a href="https://www.healthline.com/health/step-aerobics"
+    target="_blank"> 
+
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/123/original/IMG_0266.JPG?1701822048"
+    alt="Vibe Tribe Hip-Hop Aerobics"
+    class="vibe-tribe-picture"
+    />
+    </a>
+<div class="grid">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/131/original/rec_ctr.jpeg?1701836487"
+    alt="Step class with moms and kids" />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/126/original/IMG_0268.JPG?1701822075"
+    alt="Last step class at the rec center" />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/115/original/IMG_0260.JPG?1701821976" 
+    alt="Hip Hop Aerobics" />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/121/original/IMG_0264.JPG?1701822023"
+    alt="Step Class at Totem Training" />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/122/original/IMG_0265.JPG?1701822032"
+        alt="Virtual Step Class" />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/106/116/original/IMG_0261.JPG?1701821984"
+    alt="Step Class holding colorful fans" />
+    </div>
+    <p>
+        Step aerobics has all the benefits of a high-intensity cardio workout without putting stress on your joints. It improves
+        overall fitness by building strength, reducing fat, and boosting your cardiovascular health. It also burns calories, making it an ideal way to maintain your target body weight. Research has even shown that doing step aerobics can boost mood and energy levels.
+        
+        The moves target your legs, upper body, and core, building strength and flexibility. They also improve your balance,
+        coordination, and agility. The social component of a group class can be beneficial in forging new connections and may
+        help to raise motivation levels.
+
+        <br>
+        <br>
+    
+        📖
+        <a href="https://www.healthline.com/health/step-aerobics">
+        <strong>Read more on Healthline</strong>
+        </a>
+        </p>
+        
+        <button class="details-button">
+            Get class details!
+        </button>
+        </div>
+        <footer>
+            This page was coded by 
+            <a href="https://www.linkedin.com/in/angelalynnsmithdev/" target="_blank">
+                Angela Lynn Smith </a> using HTML, CSS, and JavaScript. 
+        </footer>
+        <script>
+            function changeTheme() {
+                let body = document.querySelector("body");
+
+                if (body.classList.contains("dark")) {
+                    body.classList.remove("dark");
+            } else  {
+                body.classList.add("dark");
+            }
+        }
+            let themeButton = document.querySelector(".theme-button");
+            themeButton.addEventListener("click", changeTheme);
+
+            
+            function details() {
+                    let name = prompt("What is your name?");
+                    let email = prompt("What is your e-mail address?");
+                        alert(
+                            "Thank you, " + name +
+                            "! 💜 Please check your email for the class details!");
+                    }
+
+                let detailsButton = document.querySelector(".details-button");
+
+                detailsButton.addEventListener("click", details);
+        </script>
+    </body>
+</html>
